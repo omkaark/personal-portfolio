@@ -1,0 +1,15 @@
+{
+  "short_name": "Omkaar's Website",
+  "name": "Hey, proud to see my page ranking on google! I am an aspiring product manager with a variety of tech experiences, checkout my portfolio website!",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "50x50",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

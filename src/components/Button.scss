@@ -1,0 +1,10 @@
+@import "../styles/Fonts.scss";
+@import "../styles/Responsive.scss";
+
+.button {
+  color: white;
+  font-family: #{$quicksand};
+  background-color: #007ad2;
+  font-size: 20px;
+  border-radius: 10px;
+}

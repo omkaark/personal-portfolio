@@ -1,0 +1,8 @@
+@import "../styles/Responsive.scss";
+@import "../styles/Fonts.scss";
+
+.text {
+  font-family: #{$quicksand};
+  font-size: 20px;
+  line-height: 35px;
+}
