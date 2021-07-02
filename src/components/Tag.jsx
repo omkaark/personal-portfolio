@@ -6,7 +6,7 @@ import { getColour } from '../util/colourUtil';
 const Tag = ({borderShape, tagColor, textColor, children}) => {
     const tagLength = children.length + 1 + "ex";
     return (
-        <div class="tag" style={{textAlign: "center", display: "inline-block", width: tagLength, borderRadius: borderShape === "rounded" ? "20px" : "50px", backgroundColor: getColour(tagColor), color: getColour(textColor)}}>{children}</div>
+        <div className="tag" style={{textAlign: "center", display: "inline-block", width: tagLength, borderRadius: borderShape === "rounded" ? "5px" : "50px", backgroundColor: getColour(tagColor), color: getColour(textColor)}}>{children}</div>
     );
 }
 
@@ -19,7 +19,7 @@ Tag.propTypes = {
 };
   
 Tag.defaultProps = {
-    borderShape: "5%",
+    borderShape: "rounded",
     tagColor: "#000",
     textColor: "#fff"
 };

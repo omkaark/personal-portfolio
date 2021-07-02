@@ -3,8 +3,6 @@ import Button from './Button';
 
 import './Announcement.scss';
 
-import { getColour } from '../util/colourUtil';
-
 const Announcement = ({buttonText, styles, children}) => {
     console.log(buttonText);
     const buttonLength = buttonText.length + 2 + "ex";

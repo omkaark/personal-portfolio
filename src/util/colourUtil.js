@@ -1,5 +1,5 @@
 export const Colours = {
-  BACKGROUND: "#141c5a",
+  BACKGROUND: "#000",
   DARKFONT: "#000",
   LIGHTFONT: "#fff",
   BUTTON: "#007ad2",
@@ -18,6 +18,8 @@ export function getColour(expr) {
     case "black":
       return "#000";
     case "white":
+      return "#fff";
+    default:
       return "#fff";
   }
 }

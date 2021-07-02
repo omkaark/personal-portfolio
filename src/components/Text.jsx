@@ -5,7 +5,7 @@ import './Text.scss';
 
 const Text = ({styles, children}) => {
     return (
-        <p class="text" style={styles}>
+        <p className="text" style={styles}>
             {children}
         </p>
     );
