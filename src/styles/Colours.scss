@@ -1,6 +1,5 @@
 $background: #141c5a;
-$lightfont: #000;
-$brightfont: #fff;
+$lightfont: #fff;
 $button: #007ad2;
 $black: #000;
 $white: #fff;
@@ -8,7 +7,6 @@ $white: #fff;
 :export {
   background: $background;
   lightfont: $lightfont;
-  brightfont: $brightfont;
   button: $button;
   black: $black;
   white: $white;

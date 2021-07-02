@@ -1,13 +1,11 @@
-import "./Experience.scss";
+import "./Project.scss";
 
 import "../util/colourUtil";
 
 import Tag from "./Tag.jsx";
 import Button from "./Button.jsx";
 
-import positionIcon from "../static/job-icon.svg";
-import companyIcon from "../static/company-icon.svg";
-import locationIcon from "../static/location-icon.svg";
+import projectIcon from "../static/project-icon.svg";
 import { getColour } from "../util/colourUtil";
 
 const CodeLangCollection = ({langs}) => {
@@ -18,26 +16,19 @@ const CodeLangCollection = ({langs}) => {
     );
 };
 
-const Experience = ({position, company, location, period, children}) => {
+const Project = ({name, period, CTA, children}) => {
     return (
-        <div className="experience-grid">
+        <div className="project-grid">
             <div className="general-information">
                 <div className="first-tile">
-                    <p className="position">
-                        <img alt="" src={positionIcon} className="position-icon" />
-                        <strong>{position}</strong>
+                    <p className="project-name">
+                        <img alt="" src={projectIcon} className="project-icon" />
+                        <strong>{name}</strong>
                     </p>
-                    <p className="work-period">
-                        <Tag textColor="white" height="40px" tagColor="background">{period}</Tag>
-                    </p>
+                    <Button settings={{text: CTA, onClick: () => {}}} styles={{height: "40px"}}/>
                 </div>
-                <p className="company">
-                    <img alt="" src={companyIcon} className="company-icon" />
-                    {company}
-                </p>
-                <p className="location">
-                    <img alt="" src={locationIcon} className="location-icon" />
-                    {location}
+                <p className="work-period">
+                    <Tag height="40px" textColor="white" tagColor="background">{period}</Tag>
                 </p>
             </div>
             <div className="info-tags">
@@ -48,8 +39,8 @@ const Experience = ({position, company, location, period, children}) => {
                     <strong className="title">What I did</strong><br/>
                     {children[0]}
                 </div>
-                <div className="about-company">
-                    <strong className="title">About {company}</strong><br/>
+                <div className="about-name">
+                    <strong className="title">About {name}</strong><br/>
                     {children[1]}
                 </div>
                 <div className="what-i-learned">
@@ -65,4 +56,4 @@ const Experience = ({position, company, location, period, children}) => {
     );
 }
 
-export default Experience;
+export default Project;

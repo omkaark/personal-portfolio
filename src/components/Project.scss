@@ -2,7 +2,7 @@
 @import "../styles/Fonts.scss";
 @import "../styles/Responsive.scss";
 
-.experience-grid {
+.project-grid {
   margin-top: 20px;
   font-family: #{$quicksand};
   font-size: 20px;
@@ -21,8 +21,8 @@
       "left right";
     grid-gap: 10px;
     background-color: #{$white};
-    color: #{$lightfont};
-    .about-company {
+    color: #{$white};
+    .about-name {
       grid-area: left;
     }
     .what-i-did {
@@ -36,7 +36,7 @@
       border-radius: 20px;
       padding: 20px 20px 20px 20px;
     }
-    .experience-list {
+    .project-list {
       margin: 0px;
       margin-top: 10px;
     }
@@ -73,6 +73,10 @@
     grid-area: main1;
     width: 100%;
     height: auto;
+    .work-period {
+      margin-top: 10px;
+      height: 40px;
+    }
     p {
       margin: 5px 0px;
       display: flex;
@@ -80,12 +84,12 @@
       height: 30px;
       font-weight: 600;
     }
-    .position {
+    .project-name {
       font-size: 25px;
     }
     img {
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       margin-right: 10px;
     }
     .first-tile {
@@ -94,12 +98,12 @@
       height: 35px;
     }
   }
-
   .info-tags {
     grid-area: main2;
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    margin-top: 5px;
     .button {
       padding: 3px 10px;
       margin: 0px 5px;

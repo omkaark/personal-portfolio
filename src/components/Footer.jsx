@@ -1,12 +1,25 @@
-import React from 'react';
+import "./Footer.scss";
 
-// import "./Footer.scss";
+import PropTypes from "prop-types";
 
-const Footer = ({text}) => {
+const Footer = ({children}) => {
     return (
-        <div className="footer">
-            
+        <div className="footer-cover">
+            <div className="footer">
+                {children.map((child, index) => {
+                    return <div key={index} className="footer-section">{child}</div>
+                })}
+            </div>
         </div>
     );
 } 
+
 export default Footer;
+
+Footer.propTypes = {
+    children: PropTypes.array
+}
+
+Footer.defaultProps = {
+    children: []
+}
