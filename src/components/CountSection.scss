@@ -1,0 +1,38 @@
+@import "../styles/Colours.scss";
+@import "../styles/Fonts.scss";
+@import "../styles/Responsive.scss";
+
+.count-section {
+  $column-gap: 20px;
+  display: grid;
+  grid-template-columns: calc(25% - 13px) calc(25% - 13px) calc(25% - 13px) calc(
+      25% - 13px
+    );
+  font-family: #{$quicksand};
+  color: #{$lightfont};
+  column-gap: $column-gap;
+  p {
+    margin: 0px;
+    font-size: 20px;
+  }
+  .count {
+    font-size: 40px;
+  }
+  .counter {
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #{$background};
+  }
+  @media #{$tablet} {
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    column-gap: 20px;
+    column-count: 2;
+  }
+  @media #{$mobile} {
+    grid-template-columns: 100%;
+    column-gap: 0;
+    column-count: 1;
+  }
+}

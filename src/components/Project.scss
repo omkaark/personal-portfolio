@@ -46,6 +46,12 @@
     li {
       margin: 5px 0px;
     }
+    @media #{$tablet} {
+      grid-template-areas:
+        "header"
+        "right"
+        "left";
+    }
   }
 
   .length-indicator {
@@ -96,6 +102,20 @@
       display: flex;
       justify-content: space-between;
       height: 35px;
+    }
+    @media #{$tablet} {
+      .first-tile {
+        flex-direction: column;
+        height: auto;
+      }
+      p {
+        align-items: flex-start;
+        height: auto;
+      }
+      .button {
+        margin-top: 10px;
+        width: 212px;
+      }
     }
   }
   .info-tags {

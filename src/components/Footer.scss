@@ -1,4 +1,5 @@
 @import "../styles/Colours.scss";
+@import "../styles/Responsive.scss";
 
 .footer-cover {
   background-color: #{$background};
@@ -6,8 +7,8 @@
 
 .footer {
   max-width: 900px;
-  width: 60%;
-  margin: 0px auto;
+  margin: 0px 50px;
+  width: calc(100% - 100px);
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 20px;
@@ -30,5 +31,13 @@
     .footer-link:hover {
       color: #ddd;
     }
+  }
+  @media #{$tablet} {
+    margin: 0px 50px;
+    grid-template-columns: 50% 50%;
+  }
+  @media #{$mobile} {
+    margin: 0px 50px;
+    grid-template-columns: 100%;
   }
 }

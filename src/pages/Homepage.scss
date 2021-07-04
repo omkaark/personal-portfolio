@@ -47,6 +47,25 @@
       font-size: 20px;
       margin: 0px;
     }
+    @media #{$tablet} {
+      grid-template-areas:
+        "image"
+        "title"
+        "desc";
+      grid-template-rows: auto auto auto;
+      grid-template-columns: 100%;
+      .blog-preview-title {
+        height: auto;
+      }
+    }
+    @media #{$mobile} {
+      .blog-preview-img {
+        max-width: 300px;
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+      }
+    }
   }
   .blog-preview:nth-child(1) {
     margin-top: 30px;

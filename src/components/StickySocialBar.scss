@@ -1,18 +1,23 @@
 @import "../styles/Colours.scss";
+@import "../styles/Responsive.scss";
 
-.stick-social-bar {
+.sticky-social-bar {
+  $width: 40px;
   position: fixed;
-  top: 45%;
+  top: calc(50vh - 60px);
   right: 0%;
-  height: 120px;
-  width: 40px;
+  height: auto;
+  width: $width + 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #{$black};
   align-items: center;
   .social-icon {
-    width: 30px;
-    height: 30px;
+    width: $width;
+    height: $width;
+  }
+  @media #{$mobile} {
+    display: none;
   }
 }
