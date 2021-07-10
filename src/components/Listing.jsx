@@ -1,13 +1,11 @@
-import PropTypes from "prop-types";
-
-import "./Project.scss";
+import "./Listing.scss";
 
 import "../util/colourUtil";
 
 import Tag from "./Tag.jsx";
 import Button from "./Button.jsx";
 
-import projectIcon from "../static/project-icon.svg";
+import projectIcon from "../static/listing-icon.svg";
 import { getColour } from "../util/colourUtil";
 
 const CodeLangCollection = ({ langs }) => {
@@ -17,7 +15,7 @@ const CodeLangCollection = ({ langs }) => {
         key={lang}
         settings={{ text: lang, onClick: () => {} }}
         styles={{
-          color: getColour("white"),
+          color: getColour("lightfont"),
           backgroundColor: getColour("button"),
         }}
       ></Button>
@@ -25,34 +23,28 @@ const CodeLangCollection = ({ langs }) => {
   });
 };
 
-const Project = ({ name, langTags, period, CTA, children }) => {
+const Listing = ({ name, period, CTA, children }) => {
   return (
-    <div className="project-grid">
+    <div className="listing-grid">
       <div className="general-information">
         <div className="first-tile">
-          <p className="project-name">
-            <img alt="" src={projectIcon} className="project-icon" />
+          <p className="listing-name">
+            <img alt="" src={projectIcon} className="listing-icon" />
             <strong>{name}</strong>
           </p>
-          {CTA && (
-            <Button
-              settings={{ text: CTA, onClick: () => {} }}
-              styles={{ height: "40px" }}
-            />
-          )}
+          <Button
+            settings={{ text: CTA, onClick: () => {} }}
+            styles={{ height: "40px" }}
+          />
         </div>
         <p className="work-period">
-          <Tag height="40px" textColor="white" tagColor="background">
+          <Tag height="40px" textColor="lightfont" tagColor="background">
             {period}
           </Tag>
         </p>
       </div>
       <div className="info-tags">
-        {langTags.length === 0 ? (
-          <CodeLangCollection langs={langTags}></CodeLangCollection>
-        ) : (
-          <></>
-        )}
+        <CodeLangCollection langs={["JS", "HTML", "CSS"]}></CodeLangCollection>
       </div>
       <div className="information-grid">
         <div className="what-i-did">
@@ -79,17 +71,4 @@ const Project = ({ name, langTags, period, CTA, children }) => {
   );
 };
 
-export default Project;
-
-Project.propTypes = {
-  position: PropTypes.string,
-  company: PropTypes.string,
-  location: PropTypes.string,
-  period: PropTypes.string,
-  langTags: PropTypes.array,
-  children: PropTypes.element,
-};
-
-Project.defaultProps = {
-  langTags: [],
-};
+export default Listing;

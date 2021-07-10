@@ -1,0 +1,133 @@
+@import "../styles/Colours.scss";
+@import "../styles/Fonts.scss";
+@import "../styles/Responsive.scss";
+
+.listing-grid {
+  margin-top: 20px;
+  font-family: #{$quicksand};
+  font-size: 20px;
+  display: grid;
+  grid-template-areas:
+    "left main1"
+    "left main2"
+    "left main3";
+  grid-gap: 5px;
+  .information-grid {
+    grid-area: main3;
+    font-size: 20px;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "left right";
+    grid-gap: 10px;
+    background-color: #{$white};
+    color: #{$lightfont};
+    .about-name {
+      grid-area: left;
+    }
+    .what-i-did {
+      grid-area: header;
+    }
+    .what-i-learned {
+      grid-area: right;
+    }
+    div {
+      background-color: #{$background};
+      border-radius: 20px;
+      padding: 20px 20px 20px 20px;
+    }
+    .listing-list {
+      margin: 0px;
+      margin-top: 10px;
+    }
+    .title {
+      font-weight: 700;
+    }
+    li {
+      margin: 5px 0px;
+    }
+    @media #{$tablet} {
+      grid-template-areas:
+        "header"
+        "right"
+        "left";
+    }
+  }
+
+  .length-indicator {
+    position: relative;
+    top: 10px;
+    left: -10px;
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .circle {
+      border: 5px solid #000;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+    }
+    .line {
+      height: calc(100% - 35px);
+      width: 3px;
+      background-color: black;
+    }
+  }
+
+  .general-information {
+    grid-area: main1;
+    width: 100%;
+    height: auto;
+    .work-period {
+      margin-top: 10px;
+      height: 40px;
+    }
+    p {
+      margin: 5px 0px;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      font-weight: 600;
+    }
+    .listing-name {
+      font-size: 25px;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .first-tile {
+      display: flex;
+      justify-content: space-between;
+      height: 35px;
+    }
+    @media #{$tablet} {
+      .first-tile {
+        flex-direction: column;
+        height: auto;
+      }
+      p {
+        align-items: flex-start;
+        height: auto;
+      }
+      .button {
+        margin-top: 10px;
+        width: 212px;
+      }
+    }
+  }
+  .info-tags {
+    grid-area: main2;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    .button {
+      padding: 3px 10px;
+      margin: 0px 5px;
+      border-radius: 10px;
+    }
+  }
+}
